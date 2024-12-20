@@ -1,0 +1,122 @@
+通用样式
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #2a4dff, #9d00ff, #00ffcc); /* 炫酷的蓝紫色渐变背景 */
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: 300% 300%; /* 渐变效果更强 */
+    animation: gradientAnimation 8s ease infinite; /* 渐变动画 */
+}
+
+/* 渐变动画 */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 页面头部 */
+header {
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.6); /* 半透明背景 */
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+header h1 {
+    font-size: 3.5em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 1); /* 霓虹光效 */
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-top: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* 特性区块 */
+.features {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.feature {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    width: 25%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.8); /* 增强炫酷效果 */
+}
+
+.feature h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #00ffcc; /* 霓虹绿 */
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
+}
+
+.feature p {
+    font-size: 1em;
+}
+
+/* 页脚 */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+footer p {
+    color: #bbb;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
